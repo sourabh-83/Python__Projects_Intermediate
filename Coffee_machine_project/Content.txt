@@ -1,0 +1,71 @@
+# ☕ Python Coffee Machine Simulator
+
+This is a terminal-based simulation of a coffee machine built using Python. The user can order drinks like **espresso**, **latte**, or **cappuccino**, and the machine will manage resources, accept coins, return change, and track profit.
+
+---
+
+## 📋 Features
+
+- Offers 3 types of drinks: `espresso`, `latte`, `cappuccino`
+- Tracks resources (`water`, `milk`, `coffee`) and profit
+- Checks if resources are sufficient for each order
+- Accepts coin inputs and calculates total amount
+- Returns change if payment exceeds drink cost
+- Provides `report` to show current resources and profit
+- Allows shutdown via `"end"` command
+
+---
+
+## 🛠️ How It Works
+
+1. The program starts and prompts the user:
+What would you like? (espresso/latte/cappuccino):
+
+yaml
+Copy code
+
+2. Based on the choice:
+- If `"report"` is entered: shows current machine status.
+- If `"end"` is entered: shuts down the machine.
+- If a drink is chosen:
+  - Checks if enough resources are available.
+  - Prompts the user to insert coins.
+  - Calculates total payment and returns change if needed.
+  - Prepares the drink if payment is sufficient.
+  - Deducts used ingredients from available resources.
+
+---
+
+
+OUTPUT:
+
+What would you like? (espresso/latte/cappuccino):  report
+water: 300ml
+milk: 200ml
+coffee: 100g
+Money: $0
+What would you like? (espresso/latte/cappuccino):  latte
+please insert coins.
+how many quarters? 12
+how many dimes? 12
+how many nickles? 12
+how many pennies? 12
+Here is $2.42 change
+Here is your latte☕ 
+What would you like? (espresso/latte/cappuccino):  report
+water: 100ml
+milk: 50ml
+coffee: 76g
+Money: $2.5
+What would you like? (espresso/latte/cappuccino):  latte
+Sorry there is not enough water.
+Sorry there is not enough milk.
+please insert coins.
+how many quarters? 12
+how many dimes? 23
+how many nickles? 2
+how many pennies? 12
+Here is $3.02 change
+Here is your latte☕
+What would you like? (espresso/latte/cappuccino):  end 
+thank you
