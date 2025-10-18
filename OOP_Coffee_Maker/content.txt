@@ -1,0 +1,74 @@
+☕ Coffee Machine Program
+
+A simple console-based coffee machine simulation written in Python. This program lets users order coffee, checks if there are enough resources, processes payments, and makes the coffee if everything is sufficient. It also provides reports on resources and money collected.
+
+📁 Project Structure
+coffee_machine/
+│
+├── main.py               # Main program to run the coffee machine
+├── menu.py               # Contains Menu and MenuItem classes
+├── coffee_maker.py       # Handles coffee making logic and resource management
+├── money_machine.py      # Handles payment and money transactions
+└── README.md             # Project documentation (this file)
+
+🚀 How to Run
+
+Run the program:
+
+python main.py
+
+📋 Features
+
+☕ Order drinks: espresso, latte, cappuccino
+
+💵 Simulate coin payments
+
+📉 Tracks available resources
+
+💰 Tracks money collected
+
+🔒 report command shows current resource/money status
+
+🔌 off command to shut down the machine
+
+🧩 Classes Overview
+Menu (menu.py)
+
+Manages drink options.
+
+get_items() returns a string of available drinks.
+
+find_drink(name) returns a MenuItem object.
+
+CoffeeMaker (coffee_maker.py)
+
+Checks if resources are sufficient.
+
+Makes coffee by deducting resources.
+
+report() prints current resource levels.
+
+MoneyMachine (money_machine.py)
+
+Handles coin input and calculates total payment.
+
+Checks if the payment is sufficient.
+
+Adds profit if payment is successful.
+
+report() prints the total money collected.
+
+🛠 Example Usage
+Water: 300ml
+Milk: 200ml
+Coffee: 100g
+Money: $0.0
+
+What would you like? (espresso/latte/cappuccino): latte
+Please insert coins.
+How many quarters?: 4
+How many dimes?: 0
+How many nickels?: 0
+How many pennies?: 0
+Here is $1.00
+Here is your latte ☕. Enjoy!
